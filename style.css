@@ -1,0 +1,53 @@
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+button.danger {
+  background-color: rgb(255, 185, 185);
+}
+
+.center {
+  text-align: center;
+  text-wrap: pretty;
+  margin: auto;
+  max-width: 70%;
+  min-width: fit-content;
+  padding: 10px;
+}
+
+table {
+  text-align: center;
+  margin: auto;
+  padding: 10px;
+}
+
+tr {
+  text-wrap: nowrap;
+}
+
+#hidden {display: none;}
+
+.lookslikelink {
+  background: none!important;
+  border: none;
+  padding: 0!important;
+  /*optional*/
+  font-family: arial, sans-serif;
+  /*input has OS specific font-family*/
+  color: #069;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+
+
+
+

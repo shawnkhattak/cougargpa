@@ -1,1 +1,68 @@
-<p>Hello-o-o world</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/x-icon" href="images/logo.png">
+  <link rel="stylesheet" href="style.css">
+  <title>Cougar GPA</title>
+</head>
+<body class="center" onload="loadTable();calculate();" style="border: 3px solid rgb(215, 0, 0);">
+    <img src="images/logo.png" alt="Cougar GPA" width="100">
+    <!-- Start Title Section-->
+    <div>
+      <h2>Cougar GPA</h2>
+      <p>Calculate Your Future: accurate GPA and planning tool, built by a Cougar.</p>
+    </div>
+    <hr> <!-- End Title Section / Start Results Section-->
+    <div>
+    <b>GPA Calculation</b>
+    <table>
+      <tr>
+        <td>Total Grade Points</td>
+        <td>..........</td>
+        <td id="totalGradePoints">45.00</td>
+      </tr>
+      <tr>
+        <td>Total Credit Hours</td>
+        <td>..........</td>
+        <td id="totalCreditHours">12</td>
+      </tr>
+      <tr>
+        <td>Total GPA</td>
+        <td>..........</td>
+        <td id="totalGpa">3.75</td>
+      </tr>
+      <tr>
+        <td colspan="3">
+          <button type="button" onclick="clearTable();calculate();" class="danger">Clear</button>
+          <button type="button" onclick="saveTable();calculate();">Save</button>
+          <button type="button" onclick="loadTable();calculate();">Load</button>
+          <button type="button" onclick="calculate();">Calculate</button>
+        </td>
+      </tr>
+    </table>
+
+    <span id="hidden" style="display: none;">
+      <div class="center">
+        boop
+      </div>
+    </span>
+    <button id="expander" class="lookslikelink" onclick="expandshrink();">Show more</button>
+    </div>
+    <hr> <!-- End Results Section / Start Calculation Table-->
+    <table id="main">
+      <tr>
+        <th>Semester</th>
+        <th>Course</th>
+        <th>Credits</th>
+        <th>Grade</th>
+      </tr>
+    </table>
+    <button type="button" onclick="removeRow();">Remove</button>
+    <button type="button" onclick="createRow();">Add Row</button>
+</body>
+<p>by Shawn Khattak</p>
+<script src="logic.js"></script>
+<script src="gpa.js"></script>
+</html>
