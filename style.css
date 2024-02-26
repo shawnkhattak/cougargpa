@@ -18,7 +18,8 @@ button.danger {
   text-align: center;
   text-wrap: pretty;
   margin: auto;
-  max-width: 70%;
+  width:70em;
+  max-width: 700px;
   min-width: fit-content;
   padding: 10px;
 }
@@ -29,8 +30,21 @@ table {
   padding: 10px;
 }
 
+@media only screen and (max-width: 768px) {
+  table.table2 {
+    text-align: center;
+    margin: auto;
+    padding: 10px;
+    max-width: 100% ;
+  }
+}
+
 tr {
   text-wrap: nowrap;
+}
+
+td {
+  text-wrap: pretty;
 }
 
 #hidden {display: none;}
@@ -47,7 +61,12 @@ tr {
   cursor: pointer;
 }
 
-
+#chartDiv {
+  max-width: 75%;
+  text-align: center;
+  height: auto;
+  margin: auto;
+}
 
 
 

@@ -53,7 +53,6 @@ function removeRow () {
 function createRow () {
     let main = document.getElementById("main");
     let n = main.childElementCount - 1;
-    console.log(n);
 
     const table_row = document.createElement('tr');
 
@@ -132,7 +131,6 @@ function loadTable() {
         table_row[1].children[0].value = table_data[i].course || "";
         table_row[2].children[0].value = table_data[i].credits || "";
         table_row[3].children[0].value = table_data[i].grade || "";
-        console.log(table_data[i].course, i-1)
     }
 
     console.log("Data Was Loaded");
