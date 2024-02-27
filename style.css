@@ -10,6 +10,18 @@ input[type=number] {
   -moz-appearance: textfield;
 }
 
+.sudo { 
+  width: 230px; 
+  height: 195px; 
+  margin: 50px; 
+  background-image: url( 
+"https://media.geeksforgeeks.org/wp-content/cdn-uploads/20190417124305/250.png"); 
+} 
+
+.sudo:hover { 
+  background-image: url( 
+"https://media.geeksforgeeks.org/wp-content/uploads/rk.png"); 
+} 
 button.danger {
   background-color: rgb(255, 185, 185);
 }
@@ -18,7 +30,7 @@ button.danger {
   text-align: center;
   text-wrap: pretty;
   margin: auto;
-  width:70em;
+  width:70%;
   max-width: 700px;
   min-width: fit-content;
   padding: 10px;
@@ -35,7 +47,7 @@ table {
     text-align: center;
     margin: auto;
     padding: 10px;
-    max-width: 100% ;
+    max-width: 90vw;
   }
 }
 

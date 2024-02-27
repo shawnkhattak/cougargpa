@@ -13,8 +13,8 @@
     onload="loadTable();getAverageVsUserGpa();calculate();"
     style="border: 3px solid #c8102e;"
   >
-    <img src="images/logo.png" alt="Cougar GPA" width="100"
-      onclick="createChart();"
+    <img src="images/logo.png" alt="Cougar GPA" width="100" class="logo"
+      onmouseover="this.src='images/logo-growl.png';" onmouseout="this.src='images/logo.png';"
     />
     <!-- Start Title Section-->
     <div>
@@ -56,12 +56,14 @@
 
       <span id="hidden" style="display: none">
         <div class="center">
-          <table class="table2" style="width: 70%;">
+          <table class="table2" style="width: 100%;">
             <tr>
               <td colspan="2"><div id="chartDiv"></div></td>
             </tr>
             <tr>
-              <td>Here is something helpful. </td>
+              <td>Here is a chart depicting each of your classes. 
+                The teal line is the the average grade that other coogs
+              got in a class withing the past five five years. </td>
             </tr>
           </table>
         </div>

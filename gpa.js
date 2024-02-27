@@ -6544,24 +6544,30 @@ function createChart() {
     labels: course_labels,
     datasets: [
       {
-        label: "You",
-        backgroundColor: "rgba(255, 99, 132, 0.5)",
-        borderColor: "rgb(255, 99, 132)",
-        borderWidth: 1,
-        data: user_dataset,
-      },
-      {
+        type: 'line',
         label: "Average Coog",
-        backgroundColor: "rgba(54, 162, 235, 0.5)",
-        borderColor: "rgb(54, 162, 235)",
+        backgroundColor: "rgba(2, 209, 159, 0.7)",
+        borderColor: "rgb(2, 209, 159)", 
         borderWidth: 1,
         data: avg_student_dataset,
+        tension: .4
       },
+      {
+        type: 'bar',
+        label: "You",
+        backgroundColor: "rgb(200, 16, 46, 0.7)",
+        borderColor: "rgb(150, 12, 34)",
+        borderWidth: 1,
+        data: user_dataset,
+        fill: true,
+      },
+
     ],
   };
 
   // Configuration options
   const options = {
+    
     responsive: true,
     scales: {
       y: {
@@ -6595,7 +6601,7 @@ function createChart() {
 
   // Create the chart
   const myChart = new Chart(ctx, {
-    type: "bar",
+    type: "line",
     data: data,
     options: options,
   });
