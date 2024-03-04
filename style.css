@@ -42,6 +42,14 @@ table {
   padding: 10px;
 }
 
+.table2 {
+  border: solid 1px black;
+}
+
+.table2 td {
+  width: 50%;
+}
+
 @media only screen and (max-width: 768px) {
   table.table2 {
     text-align: center;

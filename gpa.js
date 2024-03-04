@@ -6512,6 +6512,22 @@ function inverse(obj) {
   return retobj;
 }
 
+function compareArrays(array1, array2) {
+  if (array1.length !== array2.length) {
+      return "Arrays must be of equal length";
+  }
+  
+  let countLarger = 0;
+  for (let i = 0; i < array1.length; i++) {
+      if (array1[i] >= array2[i]) {
+          countLarger++;
+      }
+  }
+  
+  const percentLarger = (countLarger / array1.length) * 100;
+  return percentLarger;
+}
+
 function getAverageVsUserGpa() {
   const table_data = grabTableData();
   const course_names = table_data.map((dict) => dict["course"]);
@@ -6532,8 +6548,17 @@ function getAverageVsUserGpa() {
     }
   }
 
+  // this sets the gpa percentage in the info section
+  
+  abvAvgGpaPercent = document.getElementById("aboveAveragePercentage");
+  abvAvgGpaPercent.innerHTML = ~~compareArrays( user_dataset,avg_student_dataset).toFixed() + "%";
+
+
   return course_labels, user_dataset, avg_student_dataset;
 }
+
+
+
 
 function createChart() {
   // Grab labels and dataset 1 and 2
