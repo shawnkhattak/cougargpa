@@ -6420,22 +6420,23 @@ course_data = {
 };
 
 const gradeWeights = {
-  A: 4.0,
+  "A": 4.0,
   "A-": 3.67,
   "B+": 3.33,
-  B: 3.0,
+  "B": 3.0,
   "B-": 2.67,
   "C+": 2.33,
-  C: 2.0,
+  "C": 2.0,
   "C-": 1.67,
   "D+": 1.33,
-  D: 1.0,
+  "D": 1.0,
   "D-": 0.67,
-  F: 0.0,
+  "F": 0.0,
 };
 
+
 function calculate() {
-  var table_data = grabTableData().filter((dict) => dict.gradepoints > 0);
+  var table_data = grabTableData().filter((dict) => dict.credits > 0);
   var student_gradepoints = 0;
   var student_total_hours = 0;
 
@@ -6444,13 +6445,14 @@ function calculate() {
     student_total_hours += Number(table_data[i].credits);
   }
 
-  var student_gpa = student_gradepoints / student_total_hours || 0;
+  var student_gpa = (student_gradepoints / student_total_hours) || 0;
+  
 
   document.getElementById("totalGradePoints").innerHTML =
     student_gradepoints.toFixed(2);
   document.getElementById("totalCreditHours").innerHTML =
     student_total_hours.toFixed(2);
-  document.getElementById("totalGpa").innerHTML = student_gpa.toFixed(2);
+  document.getElementById("totalGpa").innerHTML = student_gpa.toFixed(3);
 
   createChart();
 }
